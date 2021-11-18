@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class HangmanMain {
     private String wordToFind = "alma";
-    private String wordFound = "____";
+    private String wordFound = "_".repeat(wordToFind.length());
     private int chances = 8;
 
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class HangmanMain {
         } while (!wordToFind.equals(wordFound) && (chances >= 1));
 
         if (wordToFind.equals(wordFound)) {
-            System.out.println("Ügyes!");
+            System.out.println("Ügyes! A kitalált szó: " + wordToFind);
         } else {
             System.out.println("Vesztettél!");
         }
