@@ -4,9 +4,9 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class HangmanMain {
-    String wordToFind = "alma";
-    String wordFound = "____";
-    int chances = 8;
+    private String wordToFind = "alma";
+    private String wordFound = "____";
+    private int chances = 8;
 
     public static void main(String[] args) {
         new HangmanMain().run();
