@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class HangmanMain {
-    private String wordToFind = "alma";
+    private String wordToFind = "szarvasmarha";
     private String wordFound = "_".repeat(wordToFind.length());
     private int chances = 8;
 
@@ -21,8 +21,10 @@ public class HangmanMain {
             String guess = scanner.nextLine();
 
             if (wordToFind.contains(guess)) {
+                System.out.println("Jó!");
                 wordFound = updateWordFound(wordToFind, wordFound, guess);
             } else {
+                System.out.println("Rossz!");
                 chances--;
             }
 
@@ -31,7 +33,7 @@ public class HangmanMain {
         if (wordToFind.equals(wordFound)) {
             System.out.println("Ügyes! A kitalált szó: " + wordToFind);
         } else {
-            System.out.println("Vesztettél!");
+            System.out.println("Vesztettél! A keresett szó: " + wordToFind);
         }
     }
 
